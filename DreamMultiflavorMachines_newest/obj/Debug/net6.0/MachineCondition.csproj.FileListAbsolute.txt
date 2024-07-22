@@ -1,0 +1,8 @@
+F:\batdr_files\stardew_code\tmpmods\MachineCondition\bin\Debug\net6.0\MachineCondition.deps.json
+F:\batdr_files\stardew_code\tmpmods\MachineCondition\bin\Debug\net6.0\MachineCondition.dll
+F:\batdr_files\stardew_code\tmpmods\MachineCondition\obj\Debug\net6.0\MachineCondition.csproj.AssemblyReference.cache
+F:\batdr_files\stardew_code\tmpmods\MachineCondition\obj\Debug\net6.0\MachineCondition.GeneratedMSBuildEditorConfig.editorconfig
+F:\batdr_files\stardew_code\tmpmods\MachineCondition\obj\Debug\net6.0\MachineCondition.AssemblyInfoInputs.cache
+F:\batdr_files\stardew_code\tmpmods\MachineCondition\obj\Debug\net6.0\MachineCondition.AssemblyInfo.cs
+F:\batdr_files\stardew_code\tmpmods\MachineCondition\obj\Debug\net6.0\MachineCondition.csproj.CoreCompileInputs.cache
+F:\batdr_files\stardew_code\tmpmods\MachineCondition\obj\Debug\net6.0\MachineCondition.dll

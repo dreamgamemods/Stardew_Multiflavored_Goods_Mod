@@ -1,0 +1,23 @@
+﻿{
+  "Name": "Dream's MultiFlavor Machines",
+  "Author": "dreamfisher",
+  "Version": "1.0.0",
+  "Description": "Adds a new way to prepare food",
+  "UniqueID": "dream.MultiFlavorMachines",
+  "EntryDll": "MultiFlavorMachines.dll",
+  "MinimumApiVersion": "4.0.0",
+  "Dependencies": [
+    {
+      "UniqueID": "wildflour.ateliercrops",
+      "IsRequired": false
+    },
+    {
+      "UniqueID": "Cornucopia.MoreCrops",
+      "IsRequired": false
+    },
+    {
+      "UniqueID": "BFV.CombinedCrops",
+      "IsRequired": false
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+[
+
+{
+		"Id": "dream.flavor_vegan_patty",
+		"DisplayRule": {
+			"Spritesheet": "SMAPI/{{ModId}}/assets/test.png",
+			"SpriteIndex": "1",
+			"RectangleSize": "32",
+			"ColorSource": "Origin, VEGETABLE",
+			"ScaleMenu": "0.5",
+			"ScaleHeld": "0.7",
+			"PaddingX": "0.0",
+			"PaddingY": "0.0"
+			},
+		"MachineDisplayRule": {
+			"Spritesheet": "SMAPI/{{ModId}}/assets/test.png",
+			"SpriteIndex": "1",
+			"RectangleSize": "32",
+			"ColorSource": "Origin, VEGETABLE",
+			"Scale": "0.7",
+			"PaddingX": "8.0",
+			"PaddingY": "40.0"
+			}
+	}
+
+]

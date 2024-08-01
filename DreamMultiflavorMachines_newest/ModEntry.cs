@@ -39,37 +39,38 @@ public sealed class ModEntry : Mod
 
         var harmony = new Harmony(ModManifest.UniqueID);
 
-        harmony.Patch(
-            original: AccessTools.Method(typeof(StardewValley.Object), nameof(StardewValley.Object.draw)),
-            prefix: new HarmonyMethod(typeof(ObjectDraw), nameof(ObjectDraw.ObjectDraw_prefix)),
-            postfix: new HarmonyMethod(typeof(ObjectDraw), nameof(ObjectDraw.ObjectDraw_postfix))
-        );
+            harmony.Patch(
+        original: AccessTools.Method(typeof(StardewValley.Object), nameof(StardewValley.Object.draw), new[]{typeof
+                (SpriteBatch), typeof(int), typeof(int), typeof(float)}),
+        prefix: new HarmonyMethod(typeof(ObjectDraw), nameof(ObjectDraw.ObjectDraw_prefix)),
+        postfix: new HarmonyMethod(typeof(ObjectDraw), nameof(ObjectDraw.ObjectDraw_postfix))
+    );
 
-        harmony.Patch(
-            original: AccessTools.Method(typeof(StardewValley.Object), nameof(StardewValley.Object.drawInMenu), new[]
-            {
-                    typeof(SpriteBatch), typeof(Vector2), typeof(float), typeof(float), typeof(float), typeof(StackDrawType), typeof(Color), typeof(bool)
-            }),
-            prefix: new HarmonyMethod(typeof(ObjectDraw), nameof(ObjectDraw.Object_drawInMenu_prefix))
-        );
+    harmony.Patch(
+    original: AccessTools.Method(typeof(StardewValley.Object),
+      nameof(StardewValley.Object.drawInMenu),
+      new Type[] {
+      typeof(SpriteBatch), typeof(Vector2), typeof(float), typeof(float), typeof(float),
+      typeof(StackDrawType), typeof(Color), typeof(bool) }),
+        prefix: new HarmonyMethod(typeof(ObjectDraw), nameof(ObjectDraw.Object_drawInMenu_prefix)));
 
-        harmony.Patch(
-            original: AccessTools.Method(typeof(StardewValley.Object), nameof(StardewValley.Object.drawWhenHeld)),
-            prefix: new HarmonyMethod(typeof(ObjectDraw), nameof(ObjectDraw.Object_drawWhenHeld_prefix))
-        );
+    harmony.Patch(
+        original: AccessTools.Method(typeof(StardewValley.Object),
+          nameof(StardewValley.Object.drawWhenHeld)),
+        prefix: new HarmonyMethod(typeof(ObjectDraw), nameof(ObjectDraw.Object_drawWhenHeld_prefix)));
 
-        harmony.Patch(
-            original: AccessTools.Method(typeof(ColoredObject), nameof(ColoredObject.drawInMenu), new[]
-            {
-                    typeof(SpriteBatch), typeof(Vector2), typeof(float), typeof(float), typeof(float), typeof(StackDrawType), typeof(Color), typeof(bool)
-            }),
-            prefix: new HarmonyMethod(typeof(ObjectDraw), nameof(ObjectDraw.ColoredObject_drawInMenu_prefix))
-        );
+    harmony.Patch(
+        original: AccessTools.Method(typeof(ColoredObject),
+          nameof(ColoredObject.drawInMenu),
+          new Type[] {
+      typeof(SpriteBatch), typeof(Vector2), typeof(float), typeof(float), typeof(float),
+      typeof(StackDrawType), typeof(Color), typeof(bool) }),
+        prefix: new HarmonyMethod(typeof(ObjectDraw), nameof(ObjectDraw.ColoredObject_drawInMenu_prefix)));
 
-        harmony.Patch(
-            original: AccessTools.Method(typeof(ColoredObject), nameof(ColoredObject.drawWhenHeld)),
-            prefix: new HarmonyMethod(typeof(ObjectDraw), nameof(ObjectDraw.Object_drawWhenHeld_prefix))
-        );
+    harmony.Patch(
+        original: AccessTools.Method(typeof(ColoredObject),
+          nameof(ColoredObject.drawWhenHeld)),
+        prefix: new HarmonyMethod(typeof(ObjectDraw), nameof(ObjectDraw.Object_drawWhenHeld_prefix)));
 
         defaultContextTags = new List<KeyValuePair<string, string>>()
     {
